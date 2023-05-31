@@ -3,7 +3,7 @@ import React from 'react';
 
 
 interface Iprops {
-    ingredient: { name: string; price: number; image: string }
+    ingredient: { name: string; price: number; image: string },
 }
 
 const Ingredient: React.FC<Iprops> = ({ingredient}) => {

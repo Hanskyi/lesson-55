@@ -5,6 +5,7 @@ import meatImage from "./assets/Meat.png";
 import cheeseImage from "./assets/Cheese.png";
 import saladImage from "./assets/Salad.png";
 import baconImage from "./assets/Bacon.png";
+import Burger from "./components/Burger/Burger";
 
 const INGREDIENTS = [
 
@@ -12,9 +13,8 @@ const INGREDIENTS = [
     {name: 'Cheese', price: 50, image: cheeseImage},
     {name: 'Salad', price: 50, image: saladImage},
     {name: 'Bacon', price: 50, image: baconImage},
-
-
 ];
+
 function App() {
     const [ingredients, setIngredients] = useState([
         {name: 'Meat', count: 0},
@@ -28,6 +28,7 @@ function App() {
             <Ingredients
                 ingredients={INGREDIENTS}
             />
+            <Burger/>
         </div>
     );
 }

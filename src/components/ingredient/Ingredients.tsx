@@ -1,11 +1,10 @@
 import React from 'react';
 import Ingredient from "./Ingredient";
+import './ingredient.css';
 
 interface IProps {
     ingredients: { name: string; price: number; image: string }[],
-
 }
-
 
 const Ingredients: React.FC<IProps> = ({ingredients}) => {
     return (
@@ -15,7 +14,6 @@ const Ingredients: React.FC<IProps> = ({ingredients}) => {
                     ingredient={ingredient}
                 />
             })}
-
         </div>
     );
 };
