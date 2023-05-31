@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import meatImage from './assets/Bacon.png';
 
 function App() {
+  const [ingredients, setIngredients] = useState([
+    {name: 'Meat', count: 0},
+    {name: 'Cheese', count: 0},
+    {name: 'Salad', count: 0},
+    {name: 'Bacon', count: 0}
+  ])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="ingridient-container">
+        <div className="img-container">
+          <img src={meatImage} alt="#" className="ingridient-image"/>
+        </div>
+        <p className="ingridient-name">{ingredients[0].name}</p>
+        <p className="ingridient-count">0</p>
+        <div className="button-contauner">
+          <button className="button-delete">delete</button>
+        </div>
+      </div>
     </div>
   );
 }
