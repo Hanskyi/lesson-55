@@ -3,13 +3,13 @@ import {IIngredients} from "../../types";
 
 
 
-interface Iprops {
+interface IProps {
     ingredient: IIngredients,
     onClickIngredient?: React.MouseEventHandler<HTMLDivElement>,
     onClickRemove?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-const Ingredient: React.FC<Iprops> = ({ingredient,onClickIngredient, onClickRemove}) => {
+const Ingredient: React.FC<IProps> = ({ingredient,onClickIngredient, onClickRemove}) => {
     return (
         <div className="ingredient-container">
             <div className="img-container">

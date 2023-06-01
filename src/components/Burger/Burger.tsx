@@ -2,11 +2,11 @@ import React from 'react';
 import './burger.css';
 
 interface IProps {
-    totalPrise: number;
-    burgerElements: JSX.Element[]
+    totalPrice: number;
+    burgerElements: JSX.Element[];
 }
 
-const Burger:React.FC<IProps> = ({totalPrise,burgerElements}) => {
+const Burger:React.FC<IProps> = ({totalPrice,burgerElements}) => {
     return (
         <div className="burger-container">
             <div className="Burger">
@@ -20,7 +20,7 @@ const Burger:React.FC<IProps> = ({totalPrise,burgerElements}) => {
 
                 <div className="BreadBottom"></div>
             </div>
-            <p className="burger-price">{totalPrise}</p>
+            <p className="burger-price">{totalPrice}</p>
         </div>
     );
 };
