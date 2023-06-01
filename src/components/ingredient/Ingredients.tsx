@@ -20,6 +20,7 @@ const Ingredients: React.FC<IProps> = ({ingredients,onClickIngredient, onClickRe
                     onClickRemove = { () => onClickRemove(ingredient.id)}
                 />
             })}
+            <span className="title">ingredients</span>
         </div>
     );
 };

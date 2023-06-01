@@ -2,6 +2,7 @@
     border: 1px solid black;
     padding: 10px;
     border-radius: 6px;
+    position: relative;
 }
 
 .ingredient-container {
@@ -9,8 +10,7 @@
     align-items: center;
     justify-content: space-between;
     width: 300px;
-    border-bottom: 1px solid black;
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 .ingredient-container > div, p {

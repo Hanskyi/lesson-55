@@ -20,7 +20,8 @@ const Burger:React.FC<IProps> = ({totalPrice,burgerElements}) => {
 
                 <div className="BreadBottom"></div>
             </div>
-            <p className="burger-price">{totalPrice}</p>
+            <p className="burger-price">Total: {totalPrice} som</p>
+            <span className="title">Burger</span>
         </div>
     );
 };

@@ -1,5 +1,18 @@
 .burger-container {
     width: 100%;
+    border: 1px solid black;
+    margin-left: 5px;
+    border-radius: 6px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.title {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: white;
+    padding: 0 7px;
 }
 
 .BreadBottom {
