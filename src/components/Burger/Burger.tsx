@@ -3,9 +3,10 @@ import './burger.css';
 
 interface IProps {
     totalPrise: number;
+    burgerElements: JSX.Element[]
 }
 
-const Burger:React.FC<IProps> = ({totalPrise}) => {
+const Burger:React.FC<IProps> = ({totalPrise,burgerElements}) => {
     return (
         <div className="burger-container">
             <div className="Burger">
@@ -13,9 +14,10 @@ const Burger:React.FC<IProps> = ({totalPrise}) => {
                     <div className="Seeds1"></div>
                     <div className="Seeds2"></div>
                 </div>
-                <div className="Salad"></div>
-                <div className="Cheese"></div>
-                <div className="Meat"></div>
+                {burgerElements.map(burgerEl => {
+                   return  burgerEl
+                })}
+
                 <div className="BreadBottom"></div>
             </div>
             <p className="burger-price">{totalPrise}</p>

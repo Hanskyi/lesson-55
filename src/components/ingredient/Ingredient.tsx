@@ -6,18 +6,19 @@ import {IIngredients} from "../../types";
 interface Iprops {
     ingredient: IIngredients,
     onClickIngredient?: React.MouseEventHandler<HTMLDivElement>,
+    onClickRemove?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-const Ingredient: React.FC<Iprops> = ({ingredient,onClickIngredient}) => {
+const Ingredient: React.FC<Iprops> = ({ingredient,onClickIngredient, onClickRemove}) => {
     return (
-        <div className="ingridient-container">
+        <div className="ingredient-container">
             <div className="img-container">
-                <img src={ingredient.image} alt="#" className="ingridient-image"/>
+                <img src={ingredient.image} alt="#" className="ingredient-image"/>
             </div>
-            <p id={ingredient.id} className="ingridient-name" onClick={onClickIngredient}>{ingredient.name}</p>
-            <p className="ingridient-count">{ingredient.count}</p>
-            <div className="button-contauner">
-                <button className="button-delete">delete</button>
+            <p id={ingredient.id} className="ingredient-name" onClick={onClickIngredient}>{ingredient.name}</p>
+            <p className="ingredient-count">{ingredient.count}</p>
+            <div className="button-container">
+                <button className="button-delete" onClick={onClickRemove}>delete</button>
             </div>
         </div>
     );

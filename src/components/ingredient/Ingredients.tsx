@@ -6,16 +6,18 @@ import {IIngredients} from "../../types";
 interface IProps {
     ingredients: IIngredients[],
     onClickIngredient: (id: string) => void,
+    onClickRemove: (id: string) => void,
 }
 
-const Ingredients: React.FC<IProps> = ({ingredients,onClickIngredient}) => {
+const Ingredients: React.FC<IProps> = ({ingredients,onClickIngredient, onClickRemove}) => {
     return (
-        <div>
+        <div className="container">
             {ingredients.map((ingredient) => {
                 return <Ingredient
                     key ={ingredient.id}
                     ingredient={ingredient}
                     onClickIngredient ={() =>onClickIngredient(ingredient.id)}
+                    onClickRemove = { () => onClickRemove(ingredient.id)}
                 />
             })}
         </div>
